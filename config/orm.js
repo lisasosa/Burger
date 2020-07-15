@@ -20,7 +20,7 @@ function createQuestionMarks(num) {
 
 function transToSQL(obj) {
     var arr = [];
-    for (var keey in obj) {
+    for (var key in obj) {
         var value = obj[key];
         if (Object.hasOwnProperty.call(obj, key)) {
             if (typeof value === "string" && value.indexOf(" ") >= 0) {

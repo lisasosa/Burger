@@ -5,9 +5,6 @@
 // Export at the end of the `burger.js` file.
 
 var orm = require("../config/orm");
-const {
-    insertOne
-} = require("../config/orm");
 
 var burger = {
     selectAll: function (cb) {
@@ -28,4 +25,4 @@ var burger = {
         })
     }
 };
-moduele.exports = burger;
+module.exports = burger;
