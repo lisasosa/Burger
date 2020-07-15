@@ -11,7 +11,7 @@ var router = express.Router();
 router.get('/', function (req, res) {
     burger.selectAll(function (data) {
         var hdbrsObj = {
-            burgers: data,
+            burgers: data
         };
         console.log(hdbrsObj);
         res.render('index', hdbrsObj);
@@ -22,7 +22,7 @@ router.post('/api/burgers', function (req, res) {
         ['burger_name,', 'devoured'], [req.body.burger_name, req.body.devoured],
         function (result) {
             res.json({
-                id: result.insertedId
+                id: result.insertId
             })
         });
 });
