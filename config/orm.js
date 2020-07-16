@@ -34,7 +34,7 @@ function transToSQL(obj) {
 
 var orm = {
     selectAll: function (table, cb) {
-        var queryString = `SELECT * FROM" + ${table}`;
+        var queryString = `SELECT * FROM  ${table}`;
         connection.query(queryString, function (err, res) {
             if (err)
                 throw err;
@@ -45,7 +45,7 @@ var orm = {
     insertOne: function (table, cols, vals, cb) {
         var queryString = `INSERT INTO ${table} (${cols.toString()}) VALUES(${createQuestionMarks(vals.length)})`;
         console.log(queryString);
-        connection.query(queryString, function (err, res) {
+        connection.query(queryString, vals, function (err, res) {
             if (err)
                 throw err;
             cb(res);

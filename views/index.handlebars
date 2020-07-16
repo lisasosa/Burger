@@ -1,14 +1,15 @@
-Setup the `index.handlebars` to have the template that Handlebars can render onto.
+{{!-- Setup the `index.handlebars` to have the template that Handlebars can render onto.
 
-Create a button in `index.handlebars` that will submit the user input into the database
+Create a button in `index.handlebars` that will submit the user input into the database --}}
 
 <div class="container">
-    <h1>Select you Burger here</h1>
-    <form>
+    <h2>Enter a burger name or choose from suggested list</h2>
+
+    <form class="create-form">
         <div class="form-row">
             <div class="col">
-                <input type="text" class="form-control" id="newburger" name="burger"
-                    placeholder="Enter your favorite burger">
+                <label for=newburger></label>
+                <input type="text" class="form-control" id="newburger" name="burger" placeholder="burger name">
             </div>
             <button type="submit" class="btn btn-primary" id="addburger">Submit</button>
     </form>
@@ -17,8 +18,8 @@ Create a button in `index.handlebars` that will submit the user input into the d
 <div class="row">
     <div class="col-sm-6">
         <div class="panel panel-default">
-            <div class="panel-heading" id="leftside"><strong>order burger</strong>
-                <p>select your burger</p>
+            <div class="panel-heading">
+                <p><strong>select your burger</strong></p>
             </div>
             <div class="panel-body">
 
@@ -27,7 +28,7 @@ Create a button in `index.handlebars` that will submit the user input into the d
                     {{#unless devoured}}
 
                     <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
-                    <button type="button" class="devour btn btn-warning" id="eatbutton" data-id="{{this.id}}"
+                    <button type="button" class="devour btn btn-warning" data-id="{{this.id}}"
                         data-newDevoured="{{devour}}">devour</button>
                     <hr>
                     {{/unless}}
