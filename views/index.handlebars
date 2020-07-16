@@ -38,3 +38,25 @@ Create a button in `index.handlebars` that will submit the user input into the d
             </div>
         </div>
     </div>
+    <div class="col-sm-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <p><strong>select your burger</strong></p>
+            </div>
+            <div class="panel-body">
+
+
+                <ul>
+                    {{#each burgers}}
+                    {{#if devoured}}
+
+                    <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
+
+                    <hr>
+                    {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
