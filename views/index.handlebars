@@ -1,9 +1,6 @@
-{{!-- Setup the `index.handlebars` to have the template that Handlebars can render onto.
+<div class="container bg-secondary">
 
-Create a button in `index.handlebars` that will submit the user input into the database --}}
-
-<div class="container">
-    <h2>Enter a burger name or choose from suggested list</h2>
+    <h2>Enter a burger name</h2>
 
     <form class="create-form">
         <div class="form-row">
@@ -11,7 +8,8 @@ Create a button in `index.handlebars` that will submit the user input into the d
                 <label for=newburger></label>
                 <input type="text" class="form-control" id="newburger" name="burger" placeholder="burger name">
             </div>
-            <button type="submit" class="btn btn-primary" id="addburger">Submit</button>
+            <button type="submit" class="btn btn-dark btn-sm" id="addburger">Submit</button>
+
     </form>
 </div>
 
@@ -19,7 +17,7 @@ Create a button in `index.handlebars` that will submit the user input into the d
     <div class="col-sm-6">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <p><strong>select your burger</strong></p>
+                <p><strong>Select your burger by clicking on the devour button</strong></p>
             </div>
             <div class="panel-body">
 
@@ -41,7 +39,7 @@ Create a button in `index.handlebars` that will submit the user input into the d
     <div class="col-sm-6">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <p><strong>select your burger</strong></p>
+                <p><strong>Your Selection</strong></p>
             </div>
             <div class="panel-body">
 
