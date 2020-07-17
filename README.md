@@ -5,6 +5,7 @@ Burger App
 # Links:
 
 Deployed link:
+https://sheltered-spire-84268.herokuapp.com/
 
 GitHub app repo:
 https://github.com/lisasosa/Burger
@@ -25,7 +26,7 @@ go to copy repo and install dependencies or go to app link start enjoying it
 
 ## Usage
 
-1. go to
+1. go to https://sheltered-spire-84268.herokuapp.com/
 2. Type burger name and click submit
 3. select your burger and click devour
 
